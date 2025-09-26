@@ -3,12 +3,12 @@ const form = document.getElementById('memeForm');
 const memeContainer = document.getElementById('memeContainer');
 
 form.addEventListener('submit', function(e) {
-    e.preventDefault();
+    e.preventDefault(); // to avoid default form submission
 
     // Built-in HTML5 validation will prevent empty submits
     if (!form.checkValidity()) {
-    form.reportValidity();
-    return;
+        form.reportValidity();
+        return;
     }
 
     const imageUrl = document.getElementById('imageUrl').value;
